@@ -1,11 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useLocation } from 'react-router-dom' 
+import MainScreen from './components/MainScreen';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<MainScreen />} />
+      </Routes>
+    </>
   );
 }
 

@@ -1,0 +1,42 @@
+#collectionview {
+    border-right: 1px solid #ccc;
+    margin: 0;
+    background-color: rgb(248, 248, 248);
+    height: 100vh;
+}
+
+#plotview {
+    background-color: #999;
+    height: 70vh;
+}
+
+#plotview .plot-img {
+    background-color: rgb(255, 255, 255);
+    width: 50vw;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#plotview .log-area {
+    margin: 0;
+    width: 73vw;
+    height: 25vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0;
+    border: 0;
+}
+
+.nav-button-group .navbtn {
+    background-color: rgb(248, 249, 250);
+    border: 0;
+    border-radius: 0;
+    color: #111;
+    margin: 0;
+}
+
+.nav-button-group .navbtn:hover {
+    background-color: #bbb;
+    color: black;
+}

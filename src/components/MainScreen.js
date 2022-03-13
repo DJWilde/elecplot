@@ -1,0 +1,50 @@
+import React, { useState } from 'react'
+import { Navbar, Container, Nav, ButtonGroup, Row, Col, Tab, Tabs } from 'react-bootstrap'
+import { faChartLine, faCode, faDatabase, faDownload, faHdd, faServer, faTable, faTerminal, faUpload } from '@fortawesome/free-solid-svg-icons'
+import NavButton from './layout/NavButton'
+import TestPlot from '../img/test.png'
+
+const MainScreen = () => {
+	const [key, setKey] = useState('yourCollections')
+  return (
+		<>
+			<Navbar bg="light" expand="md">
+				<Container fluid>
+					<Nav>
+						<ButtonGroup className="nav-button-group" size="md">
+							<NavButton icon={faChartLine} caption={'Nowy wykres'}></NavButton>
+							<NavButton icon={faTerminal} caption={'Nowe polecenie'}></NavButton>
+							<NavButton icon={faCode} caption={'Nowy skrypt'}></NavButton>
+							<NavButton icon={faTable} caption={'Edytor tabel'}></NavButton>
+							<NavButton icon={faHdd} caption={'Nowa kolekcja'}></NavButton>
+							<NavButton icon={faDownload} caption={'Wczytaj kolekcję'}></NavButton>
+							<NavButton icon={faServer} caption={'Dysk internetowy'}></NavButton>
+							<NavButton icon={faUpload} caption={'Prześlij plik'}></NavButton>
+							<NavButton icon={faDatabase} caption={'Prześlij kolekcję'}></NavButton>
+						</ButtonGroup>
+					</Nav>
+				</Container>
+			</Navbar>
+			<Container fluid>
+				<Row className="flex-xl-nowrap">
+					<Col md={3} lg={3} id="collectionview">
+						<Tabs activeKey={key} id="collection-tabs" onSelect={(key) => setKey(key)}>
+							<Tab eventKey='yourCollections' title="Twoje kolekcje">
+								Tu będzie widok kolekcji
+							</Tab>
+							<Tab eventKey='internetCollections' title="Kolekcje internetowe">
+								Tu będzie widok dysków internetowych
+							</Tab>
+						</Tabs>
+					</Col>
+					<Col md={3} lg={9} id="plotview">
+						<img className="plot-img" src={TestPlot} />
+						<textarea className="form-control log-area" value={'Tu będzie test logów'} readOnly></textarea>
+					</Col>
+				</Row>
+			</Container>
+		</>
+  )
+}
+
+export default MainScreen
