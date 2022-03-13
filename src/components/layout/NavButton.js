@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap'
 const NavButton = (props) => {
   return (
 		<>
-    	<Button className="navbtn">
+    	<Button onClick={props.showModal} className="navbtn">
 				<FontAwesomeIcon icon={props.icon} /><br />
 				{props.caption}
 			</Button>
