@@ -50,7 +50,7 @@ const MainScreen = () => {
 						<ButtonGroup className="nav-button-group" size="md">
 							<NavButton icon={faChartLine} caption={'Nowy wykres'}></NavButton>
 							<Button className="navbtn" onClick={showModal}>
-								<FontAwesomeIcon icon={faCode} /><br />
+								<FontAwesomeIcon icon={faTerminal} /><br />
 									Nowe polecenie
 							</Button>
 							{/* <NavButton onClick={showModal} icon={faTerminal} caption={'Nowe polecenie'}></NavButton> */}
